@@ -30,7 +30,7 @@ namespace RadioShop2._0
 
             if (connection.State == ConnectionState.Open)
             {
-                string selectQuery = "SELECT * FROM dbo.Client;";
+                string selectQuery = "SELECT * FROM dbo.Client JOIN Role ON Client.roleID = Role.id;";
                 adapter = new SqlDataAdapter(selectQuery, connectionString);
 
                 adapter.Fill(data);
@@ -45,13 +45,16 @@ namespace RadioShop2._0
                 {
                     if (row["login"].ToString() == Login.Text && row["password"].ToString() == Password.Text)
                     {
-                        MessageBox.Show("Регистрация прошла успешно!", "Уведомление", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Hide();
+                        MessageBox.Show($"Регистрация прошла успешно!\n Добро пожаловать {row["role"]} {row["fullname"]}", "Уведомление", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+
+                        Shop shop = new Shop();
+                        shop.ShowDialog();
                     }
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message, "Ошибка\n", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

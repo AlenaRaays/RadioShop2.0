@@ -73,9 +73,39 @@ namespace RadioShop2._0.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap free_icon_basket_7087821 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-basket-7087821", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap free_icon_home_1946488 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-home-1946488", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap free_icon_open_eye_829117 {
             get {
                 object obj = ResourceManager.GetObject("free-icon-open-eye-829117", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap free_icon_profile_3106773 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-profile-3106773", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -104,5 +104,13 @@
   <ItemGroup>
     <None Include="Resources\free-icon-open-eye-8291171.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\free-icon-basket-7087821.png" />
+    <None Include="Resources\free-icon-home-19464881.png" />
+    <None Include="Resources\free-icon-basket-70878211.png" />
+    <Content Include="Resources\free-icon-home-1946488.png" />
+    <Content Include="Resources\free-icon-profile-3106773.png" />
+    <None Include="Resources\free-icon-profile-31067731.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -16,5 +16,21 @@ namespace RadioShop2._0
         {
             InitializeComponent();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+            tabControl1.SelectTab(home);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(basket);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(profile);
+        }
     }
 }
