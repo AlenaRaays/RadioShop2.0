@@ -16,34 +16,24 @@ namespace RadioShop2._0
         public static SqlDataAdapter adapter;
         public static DataSet data = new DataSet();
 
-
         public LogForm()
         {
             InitializeComponent();
 
-            
-
             //незабывай писать Initial Catalog в строке подключения!
-            string connectionString = "Data Source=(localdb)\\mssqllocaldb;Integrated Security=True" +
-                ";Pooling=False;MultipleActiveResultSets=False;TrustServerCertificate=True;" +
+            string connectionString = "Data Source=ALENA\\SQLEXPRESS;Integrated Security=True;Persist Security Info=False" +
+                ";Pooling=False;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;" +
                 "Application Name=\"SQL Server Management Studio\"; Initial Catalog=RadioShop;";
-                SqlConnection connection = new SqlConnection(connectionString);
-            try
+
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+
+            if (connection.State == ConnectionState.Open)
             {
-                connection.Open();
+                string selectQuery = "SELECT * FROM dbo.Client;";
+                adapter = new SqlDataAdapter(selectQuery, connectionString);
 
-                if (connection.State == ConnectionState.Open)
-                {
-                    string selectQuery = "SELECT * FROM dbo.Client;";
-                    adapter = new SqlDataAdapter(selectQuery, connectionString);
-
-                    adapter.Fill(data);
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                adapter.Fill(data);
             }
         }
 
@@ -56,11 +46,7 @@ namespace RadioShop2._0
                     if (row["login"].ToString() == Login.Text && row["password"].ToString() == Password.Text)
                     {
                         MessageBox.Show("Регистрация прошла успешно!", "Уведомление", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Visible = false;
-
-                        Shop shop = new Shop();
-                        shop.Show();
-
+                        Hide();
                     }
                 }
                 catch(Exception ex)
