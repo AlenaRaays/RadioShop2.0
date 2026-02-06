@@ -35,14 +35,15 @@ namespace RadioShop2._0
             this.Login = new System.Windows.Forms.TextBox();
             this.Password = new System.Windows.Forms.TextBox();
             this.Panel = new System.Windows.Forms.Panel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.textpasswordvis = new System.Windows.Forms.Label();
             this.textloginvis = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.BackPanel = new System.Windows.Forms.Panel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.Panel.SuspendLayout();
+            this.BackPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // LoginB
@@ -103,10 +104,26 @@ namespace RadioShop2._0
             this.Panel.Controls.Add(this.label2);
             this.Panel.Controls.Add(this.LoginB);
             this.Panel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Panel.Location = new System.Drawing.Point(109, 112);
+            this.Panel.Location = new System.Drawing.Point(106, 113);
             this.Panel.Name = "Panel";
             this.Panel.Size = new System.Drawing.Size(385, 395);
             this.Panel.TabIndex = 3;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Location = new System.Drawing.Point(134, 369);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(123, 15);
+            this.linkLabel1.TabIndex = 7;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Зарегестрироваться";
+            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // textpasswordvis
             // 
@@ -171,26 +188,11 @@ namespace RadioShop2._0
             // 
             this.BackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BackPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackPanel.Controls.Add(this.Panel);
             this.BackPanel.Location = new System.Drawing.Point(-5, -2);
             this.BackPanel.Name = "BackPanel";
             this.BackPanel.Size = new System.Drawing.Size(596, 616);
             this.BackPanel.TabIndex = 4;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(134, 369);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(123, 15);
-            this.linkLabel1.TabIndex = 7;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Зарегестрироваться";
-            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // LogForm
             // 
@@ -199,12 +201,14 @@ namespace RadioShop2._0
             this.BackgroundImage = global::RadioShop2._0.Properties.Resources._34440863_938141074213;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 606);
-            this.Controls.Add(this.Panel);
             this.Controls.Add(this.BackPanel);
+            this.MaximumSize = new System.Drawing.Size(600, 645);
+            this.MinimumSize = new System.Drawing.Size(600, 645);
             this.Name = "LogForm";
             this.Text = "RadioShop";
             this.Panel.ResumeLayout(false);
             this.Panel.PerformLayout();
+            this.BackPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

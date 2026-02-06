@@ -51,6 +51,7 @@ namespace RadioShop2._0
             this.label2 = new System.Windows.Forms.Label();
             this.BackPanel = new System.Windows.Forms.Panel();
             this.Panel.SuspendLayout();
+            this.BackPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // LoginB
@@ -117,7 +118,7 @@ namespace RadioShop2._0
             this.Panel.Controls.Add(this.label2);
             this.Panel.Controls.Add(this.LoginB);
             this.Panel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Panel.Location = new System.Drawing.Point(109, 41);
+            this.Panel.Location = new System.Drawing.Point(108, 43);
             this.Panel.Name = "Panel";
             this.Panel.Size = new System.Drawing.Size(385, 524);
             this.Panel.TabIndex = 3;
@@ -297,6 +298,7 @@ namespace RadioShop2._0
             // BackPanel
             // 
             this.BackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackPanel.Controls.Add(this.Panel);
             this.BackPanel.Location = new System.Drawing.Point(-5, -2);
             this.BackPanel.Name = "BackPanel";
             this.BackPanel.Size = new System.Drawing.Size(596, 616);
@@ -309,12 +311,14 @@ namespace RadioShop2._0
             this.BackgroundImage = global::RadioShop2._0.Properties.Resources._34440863_938141074213;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 606);
-            this.Controls.Add(this.Panel);
             this.Controls.Add(this.BackPanel);
+            this.MaximumSize = new System.Drawing.Size(600, 645);
+            this.MinimumSize = new System.Drawing.Size(600, 645);
             this.Name = "RegForm";
             this.Text = "RadioShop";
             this.Panel.ResumeLayout(false);
             this.Panel.PerformLayout();
+            this.BackPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

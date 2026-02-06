@@ -16,6 +16,13 @@ namespace RadioShop2._0
         public RegForm()
         {
             InitializeComponent();
+
+            FormClosed += RegForm_FormClosed;
+        }
+
+        private void RegForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
 
         private void LoginB_Click(object sender, EventArgs e)
@@ -98,7 +105,5 @@ namespace RadioShop2._0
             SqlCommandBuilder sqlCommand = new SqlCommandBuilder(LogForm.adapter);
             LogForm.adapter.Update(LogForm.data);
         }
-
-        
     }
 }
